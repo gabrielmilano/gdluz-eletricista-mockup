@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDLUZ Eletricista | Gabriel da Luz</title>
+    <meta name="description" content="Instalações elétricas, fiação pelo telhado e forro, quadros de distribuição e casa inteligente. Serviço com segurança, capricho e sem gambiarra.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0c0c0c">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GDLUZ Eletricista | Gabriel da Luz">
+    <meta property="og:description" content="Da Luz no nome, luz na sua casa. Instalações elétricas, fiação e casa inteligente.">
+    <meta property="og:image" content="https://gabrielmilano.github.io/gdluz-eletricista-mockup/src/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="icon" type="image/png" href="src/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+    <!-- ÍCONES -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></symbol>
+            <symbol id="i-roof" viewBox="0 0 24 24"><path d="M2 12 12 4l10 8"/><path d="M5 10v10h14V10"/><path d="M8 15h2.5l1.5-2.5 1.5 5 1.5-2.5H17"/></symbol>
+            <symbol id="i-panel" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8.5 7v4M12 7v4M15.5 7v4M8 15h8M8 18h5"/></symbol>
+            <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 9a14.5 14.5 0 0 1 20 0"/><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/></symbol>
+            <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+            <symbol id="i-plug" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9.5" cy="11" r="1"/><circle cx="14.5" cy="11" r="1"/><path d="M10 15.5h4"/></symbol>
+            <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+            <symbol id="i-fan" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 1-7 4-7 2 0 2 3 0 5l-4 2"/><path d="M14 12c4 0 7 1 7 4 0 2-3 2-5 0l-2-4"/><path d="M12 14c0 4-1 7-4 7-2 0-2-3 0-5l4-2"/><path d="M10 12c-4 0-7-1-7-4 0-2 3-2 5 0l2 4"/></symbol>
+            <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2"/></symbol>
+            <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="m12.5 10-2 3.5h3l-2 3.5"/></symbol>
+            <symbol id="i-gauge" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="m12 13 4-4M8 3h8"/></symbol>
+            <symbol id="i-clip" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.5h6V4M9 10h6M9 14h6M9 18h3"/></symbol>
+            <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+            <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+            <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></symbol>
+            <symbol id="i-broom" viewBox="0 0 24 24"><path d="M19 3 11 11"/><path d="M11 11c-3 0-6 2-7 6l-1 4 4-1c4-1 6-4 6-7z"/><path d="m7 16 2 2"/></symbol>
+            <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+            <symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></symbol>
+            <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></symbol>
+            <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.3 3.1z"/><path d="M9 8.3c0 3.6 3 6.6 6.6 6.6l1-1.6-2-1-1 .9c-1.3-.5-2.4-1.5-2.9-2.9l.9-1-1-2z"/></symbol>
+            <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></symbol>
+            <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+            <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M8 5v5M16 5v5"/></symbol>
+            <symbol id="i-door" viewBox="0 0 24 24"><path d="M14 3H6v18h8"/><path d="M10 12h.01M14 8l4 4-4 4M18 12h-8"/></symbol>
+        </defs>
+    </svg>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#inicio" class="brand" aria-label="GDLUZ Eletricista">
+                <img src="src/img/logo-256.png" alt="" width="46" height="46">
+                <span class="brand__text"><strong>GDLUZ</strong><small>Eletricista</small></span>
+            </a>
+            <nav class="navbar__menu" id="navMenu">
+                <a href="#inicio" class="navbar__link is-active">Início</a>
+                <a href="#servicos" class="navbar__link">Serviços</a>
+                <a href="#telhado" class="navbar__link">Como trabalho</a>
+                <a href="#smart" class="navbar__link">Casa inteligente</a>
+                <a href="#sobre" class="navbar__link">Sobre</a>
+                <a href="#contato" class="navbar__link">Contato</a>
+                <a href="#" data-wa class="btn btn--brand btn--sm navbar__cta"><svg class="ic"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+            </nav>
+            <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <canvas class="hero__sparks" id="sparks" aria-hidden="true"></canvas>
+            <div class="hero__glow" aria-hidden="true"></div>
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <span class="eyebrow reveal">Eletricista profissional</span>
+                    <h1 class="hero__title reveal" style="--d:.1s">
+                        Soluções elétricas para sua <span class="rotator-line"><span class="hl rotator" id="rotator">casa</span><span class="caret" aria-hidden="true"></span></span>
+                    </h1>
+                    <p class="hero__lead reveal" style="--d:.2s">Instalações, manutenção, fiação pelo telhado e forro e automação residencial. Com segurança, capricho e o compromisso de entregar o melhor serviço — <strong>sem gambiarra</strong>.</p>
+
+                    <ul class="hero__badges reveal" style="--d:.3s">
+                        <li><svg class="ic"><use href="#i-shield"/></svg><span>Serviço com<br>segurança</span></li>
+                        <li><svg class="ic"><use href="#i-clock"/></svg><span>Atendimento<br>rápido</span></li>
+                        <li><svg class="ic"><use href="#i-award"/></svg><span>Qualidade<br>e confiança</span></li>
+                    </ul>
+
+                    <div class="hero__actions reveal" style="--d:.4s">
+                        <a href="#" data-wa data-msg="Olá Gabriel! Vim pelo site e gostaria de um orçamento." class="btn btn--brand btn--lg"><svg class="ic"><use href="#i-wa"/></svg>Solicitar orçamento<svg class="ic ic--arrow"><use href="#i-arrow"/></svg></a>
+                        <a href="#servicos" class="btn btn--ghost btn--lg">Ver serviços</a>
+                    </div>
+                </div>
+
+                <!-- Ilustração: casa sendo "ligada" — fiação sai do quadro, sobe pelo telhado e acende cada cômodo -->
+                <div class="hero__art reveal" style="--d:.2s">
+                    <p class="note note--hero" aria-hidden="true">Seu projeto elétrico<br>em boas mãos!<svg viewBox="0 0 200 20"><path d="M3 15 C60 3 140 3 197 9"/></svg></p>
+                    <svg class="house" viewBox="0 0 520 470" role="img" aria-label="Ilustração de uma casa com a fiação sendo instalada pelo telhado e os cômodos acendendo">
+                        <defs>
+                            <radialGradient id="lampGlow" cx="50%" cy="0%" r="100%">
+                                <stop offset="0" stop-color="#FFD76A" stop-opacity=".95"/>
+                                <stop offset=".45" stop-color="#F7B733" stop-opacity=".35"/>
+                                <stop offset="1" stop-color="#F7B733" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="roofGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#1d1d1d"/>
+                                <stop offset="1" stop-color="#121212"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- sótão / telhado -->
+                        <path class="house__attic" d="M60 205 260 55 460 205z" fill="url(#roofGrad)"/>
+                        <path class="house__chimney" d="M382 134V72h26v82"/>
+                        <path class="house__roof" d="M30 214 260 40 490 214"/>
+                        <g class="house__beams">
+                            <path d="M260 55v150M160 130v75M360 130v75M110 168v37M410 168v37"/>
+                        </g>
+
+                        <!-- cômodos -->
+                        <rect class="house__wall" x="70" y="205" width="380" height="225"/>
+                        <g class="rooms">
+                            <rect class="room room--1" x="74" y="209" width="124" height="217"/>
+                            <rect class="room room--2" x="202" y="209" width="120" height="217"/>
+                            <rect class="room room--3" x="326" y="209" width="120" height="217"/>
+                            <path class="beam beam--1" d="M136 232 88 426h96z" fill="url(#lampGlow)"/>
+                            <path class="beam beam--2" d="M262 232 214 426h96z" fill="url(#lampGlow)"/>
+                            <path class="beam beam--3" d="M386 232 338 426h96z" fill="url(#lampGlow)"/>
+                        </g>
+                        <path class="house__div" d="M200 205v225M324 205v225"/>
+
+                        <!-- móveis minimalistas -->
+                        <g class="house__furn">
+                            <path d="M92 400h88v-22a8 8 0 0 0-8-8h-72a8 8 0 0 0-8 8z"/>
+                            <path d="M222 360h80v66M222 360v66M240 360v-22h44v22"/>
+                            <path d="M340 395h92v31h-92zM340 395v-18h30v18"/>
+                        </g>
+
+                        <!-- quadro de distribuição -->
+                        <g class="panel">
+                            <rect x="84" y="296" width="34" height="46" rx="3"/>
+                            <path d="M92 306v10M101 306v10M110 306v10M92 326h18"/>
+                            <circle class="panel__led" cx="112" cy="336" r="2.4"/>
+                        </g>
+
+                        <!-- fiação -->
+                        <g class="wires">
+                            <path class="wire wire--main" pathLength="1" d="M101 296V190H386"/>
+                            <path class="wire wire--d1" pathLength="1" d="M136 190v34"/>
+                            <path class="wire wire--d2" pathLength="1" d="M262 190v34"/>
+                            <path class="wire wire--d3" pathLength="1" d="M386 190v34"/>
+                            <path class="wire wire--out" pathLength="1" d="M118 330h60v28"/>
+                        </g>
+                        <circle class="spark-dot" r="4">
+                            <animateMotion dur="3.2s" repeatCount="indefinite" path="M101 296V190H386"/>
+                        </circle>
+
+                        <!-- lâmpadas -->
+                        <g class="lamp lamp--1"><circle cx="136" cy="230" r="7"/></g>
+                        <g class="lamp lamp--2"><circle cx="262" cy="230" r="7"/></g>
+                        <g class="lamp lamp--3"><circle cx="386" cy="230" r="7"/></g>
+                        <rect class="outlet" x="172" y="356" width="12" height="16" rx="2"/>
+
+                        <!-- chão -->
+                        <path class="house__ground" d="M20 430h480"/>
+                    </svg>
+
+                    <div class="chip chip--a"><svg class="ic"><use href="#i-wifi"/></svg><span><b>Sala</b> ligada pelo celular</span></div>
+                    <div class="chip chip--b"><svg class="ic"><use href="#i-shield"/></svg><span><b>Quadro</b> dentro da norma</span></div>
+                </div>
+            </div>
+            <a href="#servicos" class="hero__scroll" aria-label="Rolar para os serviços"><span></span></a>
+        </section>
+
+        <!-- FAIXA -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker__track">
+                <span>Instalações elétricas</span><i>⚡</i><span>Fiação pelo telhado</span><i>⚡</i><span>Quadros de distribuição</span><i>⚡</i><span>Casa inteligente</span><i>⚡</i><span>Iluminação LED</span><i>⚡</i><span>Manutenção</span><i>⚡</i>
+                <span>Instalações elétricas</span><i>⚡</i><span>Fiação pelo telhado</span><i>⚡</i><span>Quadros de distribuição</span><i>⚡</i><span>Casa inteligente</span><i>⚡</i><span>Iluminação LED</span><i>⚡</i><span>Manutenção</span><i>⚡</i>
+            </div>
+        </div>
+
+        <!-- SERVIÇOS -->
+        <section class="section" id="servicos">
+            <div class="container">
+                <header class="section__head reveal">
+                    <span class="eyebrow">Nossos serviços</span>
+                    <h2 class="section__title">O que eu <span class="hl">faço?</span></h2>
+                    <p class="section__lead">Atendo residências, comércios e empresas. Confira os serviços — e se o seu não estiver aqui, é só chamar.</p>
+                </header>
+
+                <div class="services">
+                    <article class="card reveal"><div class="card__icon"><svg class="ic"><use href="#i-home"/></svg></div><h3>Instalações elétricas</h3><p>Instalação completa para obras novas e reformas, residenciais e comerciais.</p></article>
+                    <article class="card card--feature reveal"><div class="card__icon"><svg class="ic"><use href="#i-roof"/></svg></div><span class="card__tag">Especialidade</span><h3>Fiação pelo telhado e forro</h3><p>Entro no telhado e no forro para passar a fiação sem quebrar paredes.</p></article>
+                    <article class="card reveal"><div class="card__icon"><svg class="ic"><use href="#i-panel"/></svg></div><h3>Quadros de distribuição</h3><p>Montagem, organização, troca de disjuntores e DR.</p></article>
+                    <article class="card card--feature reveal"><div class="card__icon"><svg class="ic"><use href="#i-wifi"/></svg></div><span class="card__tag">Tecnologia</span><h3>Casa inteligente</h3><p>Luzes, tomadas e cenas controladas pelo celular ou por voz.</p></article>
+                    <article class="card reveal"><div class="card__icon"><svg class="ic"><use href="#i-bulb"/></svg></div><h3>Iluminação</h3><p>Projetos de iluminação, spots, fitas e painéis de LED.</p></article>
+                    <article class="card reveal"><div class="card__icon"><svg class="ic"><use href="#i-plug"/></svg></div><h3>Tomadas e interruptores</h3><p>Instalação, troca e adequação para o padrão novo.</p></article>
+                    <article class="card reveal"><div class="card__icon"><svg class="ic"><use href="#i-zap"/></svg></div><h3>Manutenção e reparos</h3><p>Curto-circuito, disjuntor desarmando, queda de energia? Eu resolvo.</p></article>
+                    <article class="card reveal"><div class="card__icon"><svg class="ic"><use href="#i-fan"/></svg></div><h3>Ventiladores e lustres</h3><p>Instalação de ventiladores de teto, lustres e pendentes.</p></article>
+                    <article class="card reveal"><div class="card__icon"><svg class="ic"><use href="#i-snow"/></svg></div><h3>Ar-condicionado</h3><p>Circuito e ponto elétrico dedicado para o seu ar.</p></article>
+                    <article class="card reveal"><div class="card__icon"><svg class="ic"><use href="#i-drop"/></svg></div><h3>Chuveiros</h3><p>Instalação e troca com a fiação e o disjuntor corretos.</p></article>
+                    <article class="card reveal"><div class="card__icon"><svg class="ic"><use href="#i-gauge"/></svg></div><h3>Padrão e aumento de carga</h3><p>Adequação do padrão de entrada para a concessionária.</p></article>
+                    <a href="#" data-wa data-msg="Olá Gabriel! Preciso de um serviço elétrico específico, pode me ajudar?" class="card card--cta reveal"><div class="card__icon"><svg class="ic"><use href="#i-plus"/></svg></div><h3>Serviço personalizado</h3><p>Tem alguma necessidade específica? Fale comigo!</p><span class="card__link">Chamar agora <svg class="ic"><use href="#i-arrow"/></svg></span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TELHADO / PROCESSO -->
+        <section class="section section--alt" id="telhado">
+            <div class="container roof">
+                <div class="roof__intro reveal">
+                    <span class="eyebrow">Como eu trabalho</span>
+                    <h2 class="section__title">Do telhado<br>ao <span class="hl">interruptor.</span></h2>
+                    <p class="section__lead">Muita coisa da parte elétrica de uma casa passa por onde ninguém vê: dentro do telhado e do forro. É ali que eu entro — literalmente — para puxar a fiação de um jeito seguro, organizado e sem quebra-quebra.</p>
+                    <p class="note note--roof" aria-hidden="true">Poeira e calor no telhado<br>fazem parte do serviço 😅</p>
+                </div>
+
+                <ol class="steps" id="steps">
+                    <li class="steps__line" aria-hidden="true"><span id="stepsFill"></span></li>
+                    <li class="step reveal"><span class="step__n">01</span><div><h3>Vistoria</h3><p>Vou até o local, entendo o que você precisa e avalio a instalação existente.</p></div></li>
+                    <li class="step reveal"><span class="step__n">02</span><div><h3>Orçamento claro</h3><p>Você recebe o valor e o que será feito antes de começar. Sem surpresa.</p></div></li>
+                    <li class="step reveal"><span class="step__n">03</span><div><h3>Fiação pelo telhado e forro</h3><p>Passo os cabos por cima, com eletrodutos e bitola certa para cada circuito.</p></div></li>
+                    <li class="step reveal"><span class="step__n">04</span><div><h3>Quadro e testes</h3><p>Circuitos identificados, disjuntores dimensionados e tudo testado.</p></div></li>
+                    <li class="step reveal"><span class="step__n">05</span><div><h3>Entrega limpa</h3><p>Local organizado, explicação de como ficou e suporte depois do serviço.</p></div></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- CASA INTELIGENTE -->
+        <section class="section" id="smart">
+            <div class="container smart">
+                <div class="smart__text reveal">
+                    <span class="eyebrow">Casa inteligente</span>
+                    <h2 class="section__title">Sua casa na<br><span class="hl">palma da mão.</span></h2>
+                    <p class="section__lead">Instalo interruptores e tomadas inteligentes, sensores e cenas de iluminação que funcionam pelo celular, pela Alexa ou pelo Google. Experimente a demonstração:</p>
+                    <ul class="checks">
+                        <li><svg class="ic"><use href="#i-shield"/></svg>Instalação feita junto com a parte elétrica</li>
+                        <li><svg class="ic"><use href="#i-wifi"/></svg>Controle por app, voz e horários programados</li>
+                        <li><svg class="ic"><use href="#i-bulb"/></svg>Cenas: cinema, noite, saindo de casa</li>
+                    </ul>
+                </div>
+
+                <div class="smart__demo reveal" style="--d:.15s">
+                    <div class="plan" id="plan">
+                        <div class="plan__room" data-room="sala"><span>Sala</span></div>
+                        <div class="plan__room" data-room="cozinha"><span>Cozinha</span></div>
+                        <div class="plan__room" data-room="quarto"><span>Quarto</span></div>
+                        <div class="plan__room" data-room="varanda"><span>Varanda</span></div>
+                    </div>
+
+                    <div class="phone">
+                        <div class="phone__head"><span>Minha casa</span><small id="smartStatus">0 de 4 ligados</small></div>
+                        <div class="phone__toggles">
+                            <button class="tg" data-room="sala" aria-pressed="false"><svg class="ic"><use href="#i-bulb"/></svg>Sala<i></i></button>
+                            <button class="tg" data-room="cozinha" aria-pressed="false"><svg class="ic"><use href="#i-bulb"/></svg>Cozinha<i></i></button>
+                            <button class="tg" data-room="quarto" aria-pressed="false"><svg class="ic"><use href="#i-bulb"/></svg>Quarto<i></i></button>
+                            <button class="tg" data-room="varanda" aria-pressed="false"><svg class="ic"><use href="#i-bulb"/></svg>Varanda<i></i></button>
+                        </div>
+                        <div class="phone__scenes">
+                            <button data-scene="sala,varanda"><svg class="ic"><use href="#i-film"/></svg>Cinema</button>
+                            <button data-scene="quarto"><svg class="ic"><use href="#i-moon"/></svg>Noite</button>
+                            <button data-scene=""><svg class="ic"><use href="#i-door"/></svg>Saindo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section class="section section--alt about" id="sobre">
+            <div class="container about__grid">
+                <div class="about__bulb reveal">
+                    <button class="pendant" id="pendant" aria-label="Puxar a cordinha e acender a lâmpada" aria-pressed="true">
+                        <span class="pendant__cord"></span>
+                        <svg class="pendant__lamp" viewBox="0 0 120 170" aria-hidden="true">
+                            <path class="pendant__cap" d="M44 0h32v26H44z"/>
+                            <path class="pendant__glass" d="M40 26h40c0 18 22 34 22 70a42 42 0 0 1-84 0c0-36 22-52 22-70z"/>
+                            <path class="pendant__fil" d="M50 60v30c0 10 20 10 20 0V60M50 90c4 8 8-8 10 0s6-8 10 0"/>
+                        </svg>
+                        <span class="pendant__halo"></span>
+                    </button>
+                    <p class="note note--bulb" aria-hidden="true">clica na lâmpada ☝️</p>
+                </div>
+
+                <div class="about__text reveal" style="--d:.1s">
+                    <span class="eyebrow">Sobre mim</span>
+                    <h2 class="section__title">Gabriel <span class="hl">da Luz</span></h2>
+                    <p class="about__quote">Da Luz no nome.<br>Luz na sua casa.</p>
+                    <p>Sou eletricista profissional e atendo instalações e manutenções elétricas residenciais, comerciais e industriais. Subo no telhado, entro no forro, organizo quadro e deixo tudo funcionando — e ainda deixo sua casa inteligente, se você quiser.</p>
+                    <p>Prezo por um atendimento honesto, ágil e com total segurança, do jeito que eu faria na minha própria casa.</p>
+
+                    <div class="stats">
+                        <div class="stat"><strong><span class="counter" data-from="99" data-to="0">99</span></strong><small>gambiarras deixadas para trás</small></div>
+                        <div class="stat"><strong>NBR 5410</strong><small>norma seguida em cada circuito</small></div>
+                        <div class="stat"><strong><span class="counter" data-from="0" data-to="100">0</span>%</strong><small>compromisso com o cliente</small></div>
+                    </div>
+
+                    <ul class="values">
+                        <li><svg class="ic"><use href="#i-award"/></svg>Experiência no ramo</li>
+                        <li><svg class="ic"><use href="#i-shield"/></svg>Compromisso com o cliente</li>
+                        <li><svg class="ic"><use href="#i-broom"/></svg>Trabalho limpo e organizado</li>
+                        <li><svg class="ic"><use href="#i-wa"/></svg>Suporte pós-serviço</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS (textos ilustrativos — trocar por avaliações reais do cliente) -->
+        <section class="section" id="depoimentos">
+            <div class="container testi">
+                <header class="testi__head reveal">
+                    <div>
+                        <span class="eyebrow">Depoimentos</span>
+                        <h2 class="section__title">O que dizem meus <span class="hl">clientes?</span></h2>
+                        <p class="section__lead">A satisfação de quem já contratou é a minha maior motivação.</p>
+                    </div>
+                    <p class="note note--testi" aria-hidden="true">Confiança também<br>é energia!</p>
+                </header>
+                <div class="testi__list">
+                    <figure class="quote reveal"><div class="stars" aria-label="5 estrelas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>“Serviço excelente, chegou no horário e resolveu tudo com muita agilidade. Recomendo!”</blockquote><figcaption><span class="avatar">C</span><b>Carlos M.</b><small>Residencial</small></figcaption></figure>
+                    <figure class="quote reveal" style="--d:.1s"><div class="stars" aria-label="5 estrelas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>“Subiu no telhado, passou toda a fiação nova e não quebrou nenhuma parede. Caprichoso demais.”</blockquote><figcaption><span class="avatar">J</span><b>Juliana S.</b><small>Reforma</small></figcaption></figure>
+                    <figure class="quote reveal" style="--d:.2s"><div class="stars" aria-label="5 estrelas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>“Deixou a casa toda automatizada, ligo as luzes pelo celular. Já é meu eletricista fixo!”</blockquote><figcaption><span class="avatar">R</span><b>Rafael L.</b><small>Casa inteligente</small></figcaption></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section section--alt" id="faq">
+            <div class="container faq">
+                <header class="section__head section__head--center reveal">
+                    <span class="eyebrow">Dúvidas frequentes</span>
+                    <h2 class="section__title">Perguntas <span class="hl">rápidas</span></h2>
+                </header>
+                <div class="faq__list">
+                    <details class="reveal"><summary>Você passa fiação sem quebrar parede?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Na maioria dos casos, sim. Aproveito o telhado e o forro para levar os cabos até onde precisa, com eletrodutos, e desço só o necessário até o ponto.</p></details>
+                    <details class="reveal"><summary>O orçamento tem custo?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Manda uma mensagem no WhatsApp contando o que precisa (fotos ajudam!). Para serviços maiores, combinamos uma visita para avaliar no local.</p></details>
+                    <details class="reveal"><summary>Funciona com Alexa e Google?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Sim. Os dispositivos que instalo funcionam por aplicativo e por assistentes de voz como Alexa e Google Assistente.</p></details>
+                    <details class="reveal"><summary>Atende empresas e comércios?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Atendo residências, comércios e empresas — de uma tomada nova até a instalação completa.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta" id="contato">
+            <div class="cta__bolt" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-zap"/></svg></div>
+            <div class="container cta__inner reveal">
+                <div class="cta__icon"><svg class="ic"><use href="#i-wa"/></svg></div>
+                <div class="cta__text">
+                    <h2>Precisa de um eletricista?</h2>
+                    <p>Chama no WhatsApp e faça já seu orçamento!</p>
+                </div>
+                <a href="#" data-wa data-msg="Olá Gabriel! Vim pelo site e gostaria de um orçamento." class="btn btn--dark btn--lg"><svg class="ic"><use href="#i-wa"/></svg>Solicitar orçamento<svg class="ic ic--arrow"><use href="#i-arrow"/></svg></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <a href="#inicio" class="brand"><img src="src/img/logo-256.png" alt="" width="46" height="46"><span class="brand__text"><strong>GDLUZ</strong><small>Eletricista</small></span></a>
+            <nav class="footer__nav">
+                <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#telhado">Como trabalho</a><a href="#smart">Casa inteligente</a><a href="#sobre">Sobre</a>
+            </nav>
+            <div class="footer__social">
+                <a href="https://www.instagram.com/eugabrieldaluz/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-insta"/></svg></a>
+                <a href="#" data-wa aria-label="WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <small>© <span id="year">2026</span> GDLUZ Eletricista · Gabriel da Luz. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+
+    <a href="#" data-wa class="wa-float" aria-label="Chamar no WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
