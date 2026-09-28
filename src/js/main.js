@@ -1,7 +1,7 @@
 /* GDLUZ Eletricista — interações */
 (() => {
     // Número do WhatsApp no formato 55 + DDD + número (só dígitos). Vazio = abre o WhatsApp para escolher o contato.
-    const WHATSAPP = '';
+    const WHATSAPP = '5548999164841';
     const DEFAULT_MSG = 'Olá Gabriel! Vim pelo site da GDLUZ e gostaria de um orçamento.';
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
