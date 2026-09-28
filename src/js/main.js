@@ -23,7 +23,6 @@
         navbar.classList.toggle('is-scrolled', y > 30);
         progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
         waFloat.classList.toggle('is-shown', y > window.innerHeight * .6);
-        updateSteps();
     };
 
     // menu mobile
@@ -65,16 +64,15 @@
     document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
     // cards de serviço entram em cascata
-    document.querySelectorAll('.services .card').forEach((c, i) => c.style.setProperty('--d', `${(i % 4) * .08}s`));
+    document.querySelectorAll('.services .card').forEach((c, i) => c.style.setProperty('--d', `${(i % 3) * .08}s`));
 
     // ---------- texto rotativo do hero ----------
     const rotator = document.getElementById('rotator');
-    const words = ['casa', 'empresa', 'comércio', 'casa inteligente', 'reforma'];
+    const words = ['casa', 'empresa', 'loja', 'casa inteligente'];
     if (rotator && !reduceMotion) {
         let w = 0, i = words[0].length, deleting = true;
         const tick = () => {
-            const word = words[w];
-            rotator.textContent = word.slice(0, i);
+            rotator.textContent = words[w].slice(0, i);
             let delay = deleting ? 55 : 95;
             if (deleting) {
                 if (--i < 0) { deleting = false; w = (w + 1) % words.length; i = 0; delay = 250; }
@@ -160,47 +158,6 @@
         });
     }
 
-    // ---------- linha do processo acende com o scroll ----------
-    const stepsWrap = document.getElementById('steps');
-    const stepsFill = document.getElementById('stepsFill');
-    const steps = [...document.querySelectorAll('.step')];
-    function updateSteps() {
-        if (!stepsWrap) return;
-        const r = stepsWrap.getBoundingClientRect();
-        const mark = window.innerHeight * .6;
-        const f = Math.min(Math.max((mark - r.top) / r.height, 0), 1);
-        stepsFill.style.setProperty('--fill', f);
-        steps.forEach(s => {
-            const n = s.querySelector('.step__n').getBoundingClientRect();
-            s.classList.toggle('is-lit', n.top + n.height / 2 < mark);
-        });
-    }
-
-    // ---------- demo casa inteligente ----------
-    const rooms = document.querySelectorAll('.plan__room');
-    const toggles = document.querySelectorAll('.tg');
-    const status = document.getElementById('smartStatus');
-    const setRoom = (name, on) => {
-        document.querySelector(`.plan__room[data-room="${name}"]`).classList.toggle('is-on', on);
-        document.querySelector(`.tg[data-room="${name}"]`).setAttribute('aria-pressed', on);
-        const n = document.querySelectorAll('.plan__room.is-on').length;
-        status.textContent = `${n} de ${rooms.length} ligados`;
-    };
-    toggles.forEach(t => t.addEventListener('click', () => setRoom(t.dataset.room, t.getAttribute('aria-pressed') !== 'true')));
-    rooms.forEach(r => r.addEventListener('click', () => setRoom(r.dataset.room, !r.classList.contains('is-on'))));
-    document.querySelectorAll('[data-scene]').forEach(b => b.addEventListener('click', () => {
-        const on = b.dataset.scene ? b.dataset.scene.split(',') : [];
-        rooms.forEach((r, i) => setTimeout(() => setRoom(r.dataset.room, on.includes(r.dataset.room)), i * 120));
-    }));
-    // acende a sala sozinha na primeira vez que a demo aparece, para mostrar que é interativo
-    const plan = document.getElementById('plan');
-    new IntersectionObserver(([e], obs) => {
-        if (!e.isIntersecting) return;
-        obs.disconnect();
-        setTimeout(() => setRoom('sala', true), 700);
-        setTimeout(() => setRoom('varanda', true), 1300);
-    }, { threshold: .5 }).observe(plan);
-
     // ---------- lâmpada pendente (puxar a cordinha) ----------
     const pendant = document.getElementById('pendant');
     const about = document.getElementById('sobre');
@@ -210,28 +167,8 @@
         about.classList.toggle('is-dark', !on);
     });
 
-    // ---------- contadores ----------
-    const counterObs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (!e.isIntersecting) return;
-            counterObs.unobserve(e.target);
-            const el = e.target, from = +el.dataset.from, to = +el.dataset.to;
-            if (reduceMotion) { el.textContent = to; return; }
-            const dur = 1800, start = performance.now();
-            const step = now => {
-                const p = Math.min((now - start) / dur, 1);
-                const eased = 1 - Math.pow(1 - p, 3);
-                el.textContent = Math.round(from + (to - from) * eased);
-                if (p < 1) requestAnimationFrame(step);
-            };
-            requestAnimationFrame(step);
-        });
-    }, { threshold: .6 });
-    document.querySelectorAll('.counter').forEach(c => counterObs.observe(c));
-
     document.getElementById('year').textContent = new Date().getFullYear();
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', updateSteps);
     onScroll();
 })();
