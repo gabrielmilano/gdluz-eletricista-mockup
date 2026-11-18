@@ -377,3 +377,23 @@ p { margin: 0; }
     *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     html { scroll-behavior: auto; }
 }
+
+/* ---------- serviços em dois grupos (mais pedidos / instalações especiais) ---------- */
+.services--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.services__group { display: flex; align-items: center; gap: 14px; margin: 0 0 18px; font-family: var(--ff-h); font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--y); }
+.services__group::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.services + .services__group { margin-top: 44px; }
+.services__extra { margin-top: 28px; text-align: center; color: var(--mut); font-size: 15px; }
+a.card { display: flex; flex-direction: column; color: inherit; text-decoration: none; }
+.card p { flex: 1; }
+.card__cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--y); }
+.card__cta .ic { width: 15px; height: 15px; stroke-width: 2.2; transition: transform .3s var(--ease); }
+.card:hover .card__cta .ic { transform: translateX(4px); }
+.card__tag { position: absolute; top: 16px; right: 16px; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #111; background: var(--y); }
+.card:focus-visible { outline: 2px solid var(--y); outline-offset: 3px; }
+@media (max-width: 980px) { .services--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) {
+    .services + .services__group { margin-top: 34px; }
+    .card__cta { font-size: 12px; margin-top: 12px; }
+    .card__tag { top: 12px; right: 12px; font-size: 10px; padding: 2px 8px; }
+}

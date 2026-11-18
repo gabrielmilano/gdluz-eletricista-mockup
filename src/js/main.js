@@ -64,7 +64,7 @@
     document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
     // cards de serviço entram em cascata
-    document.querySelectorAll('.services .card').forEach((c, i) => c.style.setProperty('--d', `${(i % 3) * .08}s`));
+    document.querySelectorAll('.services .card').forEach((c, i) => c.style.setProperty('--d', `${(i % 4) * .08}s`));
 
     // ---------- texto rotativo do hero ----------
     const rotator = document.getElementById('rotator');
